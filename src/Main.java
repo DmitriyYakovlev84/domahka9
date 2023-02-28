@@ -6,10 +6,10 @@ public class Main {
 
     //Реализуйте метод, который получает в качестве параметра год,
     // проверяет, является ли он високосным, и выводит результат в консоль.
-    //Результат программы выведите в консоль. Если год високосный, то напечатайте сообщение:
+    //Результат программы выведите в консоль. Если год  високосный, то напечатайте сообщение:
     // «...  год — високосный год». Если год невисокосный, то: «... год — невисокосный год».
     public static void printLeapYear(int year) {
-
+        printLeapYear(year );
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год — високосный год ");
         } else {
@@ -27,21 +27,25 @@ public class Main {
     // какую версию приложения (обычную или облегченную) и для какой ОС (Android или iOS)
     // установить пользователю.
     public static void printVersion(int os, int year) {
+        printVersion(1,0);
         int currentYear = LocalDate.now().getYear();
         if (currentYear == year && os == 1) {
             System.out.println("установите обычную версию для Android");
         } else if (currentYear > year && os == 1) {
-            System.out.println("установите олегченая версию для Android");
+            System.out.println("установите облегченая версию для Android");
         } else if (currentYear == year && os == 0) {
             System.out.println("установите обычную версию для iOS");
         } else {
-            System.out.println("установите олегченая версию для iOS");
+            System.out.println("установите облегченая версию для iOS");
         }
     }
 
 
     //Ваша задача — доработать код, а именно написать метод,
     // который на вход принимает дистанцию и возвращает итоговое количество дней доставки.
+
+
+
     public static void knowTheDistance (int howMuchDeliveryDaysNeed) {
         knowTheDistance (122);
         var  result = howMuchDeliveryDaysNeed ;{
