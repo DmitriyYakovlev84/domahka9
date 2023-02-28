@@ -9,7 +9,7 @@ public class Main {
     //Результат программы выведите в консоль. Если год  високосный, то напечатайте сообщение:
     // «...  год — високосный год». Если год невисокосный, то: «... год — невисокосный год».
     public static void printLeapYear(int year) {
-        printLeapYear(year );
+        printLeapYear(year);
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год — високосный год ");
         } else {
@@ -27,7 +27,7 @@ public class Main {
     // какую версию приложения (обычную или облегченную) и для какой ОС (Android или iOS)
     // установить пользователю.
     public static void printVersion(int os, int year) {
-        printVersion(1,0);
+        printVersion(1, 0);
         int currentYear = LocalDate.now().getYear();
         if (currentYear == year && os == 1) {
             System.out.println("установите обычную версию для Android");
@@ -45,13 +45,18 @@ public class Main {
     // который на вход принимает дистанцию и возвращает итоговое количество дней доставки.
 
 
+    public static int howMuchDeliveryDaysNeed(int knowTheDistance ) {
+        int howMuchDeliveryDaysNeed = 0;
+        if (knowTheDistance <= 20) {
+            howMuchDeliveryDaysNeed = 1;
+        } else if (knowTheDistance > 20 && knowTheDistance <= 60) {
+                howMuchDeliveryDaysNeed++;
+            } else if (knowTheDistance > 60 && knowTheDistance <= 100) {
+                howMuchDeliveryDaysNeed++;
+            } else if (knowTheDistance > 100) {
+                return -1;
+            }
+            return howMuchDeliveryDaysNeed;
 
-    public static void knowTheDistance (int howMuchDeliveryDaysNeed) {
-        knowTheDistance (122);
-        var  result = howMuchDeliveryDaysNeed ;{
-        if (result == -1) {
-            System.out.println("Доставки нет");
-        }else {
-            System.out.println("Доставка займет"+result);
         }
-    }}}
+    }
